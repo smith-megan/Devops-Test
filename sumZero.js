@@ -1,4 +1,4 @@
-//unfinished see other problems for test results
+const perf = require('execution-time')();
 
 function sumZero(arr){
   let sums = []
@@ -12,10 +12,9 @@ function sumZero(arr){
     } else {
       sums.push([arr[i], minusZero])
     }
-    obj[minusZero]=arr[i]
+    obj[arr[i]]=arr[i]
   }
-  
-}
+  return false
 }
 
 console.log(sumZero([]))
@@ -29,3 +28,15 @@ console.log(sumZero([1, 2, 3]))
 
 console.log(sumZero([1, 2, 3, -2]))
 // -> True
+
+console.log(sumZero([1, 2, 3, -1]))
+// -> True
+
+//time complexity O(n)
+//106 μs estimated time for array of 5 nums
+
+//get the time
+perf.start();        
+sumZero([-3,10,4,3,2])
+let resultsAppend = perf.stop();
+console.log('estimated time', resultsAppend)
