@@ -23,7 +23,7 @@ function doublerInsert(nums){
     }
 
 }
-
+// O(n)
 
 function getSizedArray(size){
     let array = [];
@@ -32,7 +32,7 @@ function getSizedArray(size){
     }
     return array
 }
-
+// O(n^2)
 
 const tinyArray = getSizedArray(10);
 const smallArray = getSizedArray(100);
